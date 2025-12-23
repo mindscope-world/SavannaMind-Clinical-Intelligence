@@ -38,19 +38,40 @@
         background-color: var(--medical-dark);
         color: #f8fafc;
         margin: 0;
+        cursor: none; /* Custom magnetic cursor will be used */
       }
       .gradient-hero {
         background: radial-gradient(circle at 50% 50%, #0a2540 0%, #011627 100%);
       }
-      .glass {
-        background: rgba(1, 22, 39, 0.8);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.05);
+      
+      /* High-End Grainy Glassmorphism */
+      .grainy-glass {
+        position: relative;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.08);
       }
-      .scanline {
-        background: linear-gradient(90deg, transparent, var(--brand-cyan), transparent);
-        box-shadow: 0 0 20px 2px rgba(34, 211, 238, 0.8);
+
+      .grainy-glass::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: -1;
+        opacity: 0.04;
+        filter: url(#grainy-noise);
+        pointer-events: none;
       }
+
+      /* Tactile Bento Card Transitions */
+      .bento-card {
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+      }
+      .bento-card:hover {
+        transform: scale(1.02);
+      }
+
       /* Hide scrollbar */
       ::-webkit-scrollbar { width: 8px; }
       ::-webkit-scrollbar-track { background: #011627; }
@@ -72,6 +93,13 @@
 </script>
   </head>
   <body>
+    <!-- SVG Noise Filter for Tactile Grainy Texture -->
+    <svg style="position: absolute; width: 0; height: 0; pointer-events: none;">
+      <filter id="grainy-noise">
+        <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+        <feColorMatrix type="saturate" values="0" />
+      </filter>
+    </svg>
     <div id="root"></div>
     <script type="module" src="index.tsx"></script>
   </body>
