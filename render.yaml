@@ -1,0 +1,6 @@
+services:
+  - type: static
+    name: savannamind-healthcare-ai
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
