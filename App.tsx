@@ -13,6 +13,7 @@ import AboutPage from './pages/AboutPage.tsx';
 import ContactPage from './pages/ContactPage.tsx';
 import ClinicalEvidencePage from './pages/ClinicalEvidencePage.tsx';
 import RegulatoryPage from './pages/RegulatoryPage.tsx';
+import MagneticCursor from './components/MagneticCursor.tsx';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState('home');
@@ -52,6 +53,7 @@ const App: React.FC = () => {
 
   return (
     <div className="relative min-h-screen selection:bg-cyan-500/30 overflow-x-hidden">
+      <MagneticCursor />
       <Navbar onNavigate={setCurrentPage} currentPage={currentPage} />
       <main className="pt-20">
         {renderPage()}

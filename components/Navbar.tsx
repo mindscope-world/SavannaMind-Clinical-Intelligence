@@ -62,8 +62,9 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
           {navLinks.map((link) => (
             <button
               key={link.id}
+              data-magnetic
               onClick={() => handleLinkClick(link.id)}
-              className={`text-[10px] font-black uppercase tracking-[0.2em] transition-colors ${
+              className={`text-[10px] font-black uppercase tracking-[0.2em] transition-colors p-2 ${
                 currentPage === link.id ? 'text-cyan-400' : 'text-slate-400 hover:text-white'
               }`}
             >
@@ -71,8 +72,9 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
             </button>
           ))}
           <button 
+            data-magnetic
             onClick={() => handleLinkClick('contact')}
-            className="bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-cyan-500/10"
+            className="bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all shadow-lg shadow-cyan-500/10"
           >
             Get Started
           </button>

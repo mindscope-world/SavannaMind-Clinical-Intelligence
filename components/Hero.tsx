@@ -77,11 +77,11 @@ const Hero: React.FC = () => {
             variants={item}
             className="flex flex-col sm:flex-row items-start gap-6"
           >
-            <button className="relative group overflow-hidden bg-cyan-400 text-black px-12 py-5 rounded-2xl font-black text-lg shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-all transform active:scale-95 uppercase tracking-widest">
+            <button data-magnetic className="relative group overflow-hidden bg-cyan-400 text-black px-12 py-5 rounded-2xl font-black text-lg shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-all transform active:scale-95 uppercase tracking-widest">
               <span className="relative z-10">Request Pilot</span>
               <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
             </button>
-            <button className="px-12 py-5 rounded-2xl font-black text-lg text-white border-2 border-white/10 hover:border-cyan-400/50 hover:bg-white/5 transition-all flex items-center gap-3 uppercase tracking-widest">
+            <button data-magnetic className="px-12 py-5 rounded-2xl font-black text-lg text-white border-2 border-white/10 hover:border-cyan-400/50 hover:bg-white/5 transition-all flex items-center gap-3 uppercase tracking-widest">
               See the Tech
               <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></div>
             </button>
