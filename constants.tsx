@@ -46,7 +46,7 @@ export const STATS: StatItem[] = [
 export const PRODUCTS: ProductHighlight[] = [
   {
     id: "sXR",
-    title: "sXR for Chest X-Rays",
+    title: "Chest X-Ray (sXR)",
     subtitle: "Automated Chest Screening",
     description: "Our flagship AI solution detects 30+ abnormalities in chest X-rays, including TB, nodules, and pneumonia, with clinical-grade accuracy.",
     imageUrl: "https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?auto=format&fit=crop&q=80&w=2000",
@@ -54,7 +54,7 @@ export const PRODUCTS: ProductHighlight[] = [
   },
   {
     id: "sER",
-    title: "sER for Head CT",
+    title: "Neuro Triage (sER)",
     subtitle: "Emergency Room Triage",
     description: "Identifies life-threatening anomalies like intracranial hemorrhages, infarcts, and fractures in non-contrast head CT scans within seconds.",
     imageUrl: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&q=80&w=2000",

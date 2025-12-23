@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Linkedin, Twitter, Github, Mail, ShieldCheck, Lock, FileText } from 'lucide-react';
+import { Linkedin, Twitter, Github, Mail, ShieldCheck, Lock, FileText, Activity } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (page: string) => void;
@@ -39,8 +39,26 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div>
           <h4 className="text-white font-black mb-8 uppercase tracking-[0.4em] text-[10px]">Clinical Portals</h4>
           <ul className="space-y-4 text-xs font-bold uppercase tracking-widest">
-            <li><button onClick={() => onNavigate('products')} className="hover:text-cyan-400 transition-colors flex items-center gap-2">Chest X-Ray (sXR)</button></li>
-            <li><button onClick={() => onNavigate('products')} className="hover:text-cyan-400 transition-colors flex items-center gap-2">Neuro Triage (sER)</button></li>
+            <li>
+              <button onClick={() => onNavigate('products')} className="group hover:text-cyan-400 transition-colors flex items-center gap-3">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                </span>
+                Chest X-Ray (sXR)
+                <span className="text-[8px] px-2 py-0.5 rounded bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 group-hover:bg-cyan-500 group-hover:text-black transition-all">PRODUCT</span>
+              </button>
+            </li>
+            <li>
+              <button onClick={() => onNavigate('products')} className="group hover:text-cyan-400 transition-colors flex items-center gap-3">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                </span>
+                Neuro Triage (sER)
+                <span className="text-[8px] px-2 py-0.5 rounded bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 group-hover:bg-cyan-500 group-hover:text-black transition-all">PRODUCT</span>
+              </button>
+            </li>
             <li><button onClick={() => onNavigate('products')} className="hover:text-cyan-400 transition-colors flex items-center gap-2">Vascular AI</button></li>
             <li><button onClick={() => onNavigate('clinical')} className="hover:text-cyan-400 transition-colors flex items-center gap-2">Independent Evidence</button></li>
           </ul>
