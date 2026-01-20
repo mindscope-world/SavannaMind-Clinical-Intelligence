@@ -16,12 +16,12 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="space-y-8">
           <div className="flex items-center space-x-3 cursor-pointer group" onClick={() => onNavigate('home')}>
             <img 
-               src="https://api.dicebear.com/7.x/initials/svg?seed=SM&backgroundColor=d4af37,22d3ee" 
+               src="https://api.dicebear.com/7.x/initials/svg?seed=QR&backgroundColor=d4af37,22d3ee" 
                className="w-10 h-10 rounded-full border border-medical-gold/20 shadow-lg shadow-black/50 transition-transform group-hover:scale-110" 
-               alt="SavannaMind Logo"
+               alt="QuantusRad Logo"
              />
             <span className="text-2xl font-black tracking-tighter text-white">
-              Savanna<span className="text-cyan-400">Mind</span>
+              Quantus<span className="text-cyan-400">Rad</span>
             </span>
           </div>
           <p className="leading-relaxed text-sm max-w-xs">
@@ -45,7 +45,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
                 </span>
-                Chest X-Ray (sXR)
+                Chest X-Ray (qXR)
                 <span className="text-[8px] px-2 py-0.5 rounded bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 group-hover:bg-cyan-500 group-hover:text-black transition-all">PRODUCT</span>
               </button>
             </li>
@@ -55,7 +55,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
                 </span>
-                Neuro Triage (sER)
+                Neuro Triage (qER)
                 <span className="text-[8px] px-2 py-0.5 rounded bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 group-hover:bg-cyan-500 group-hover:text-black transition-all">PRODUCT</span>
               </button>
             </li>
@@ -95,7 +95,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
       <div className="max-w-7xl mx-auto pt-10 border-t border-white/5 flex flex-col lg:flex-row justify-between items-center gap-8 text-[10px] font-black uppercase tracking-[0.3em] relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-6">
-          <p className="text-slate-600">© 2024 SavannaMind Intelligence Inc.</p>
+          <p className="text-slate-600">© 2024 QuantusRad Intelligence Inc.</p>
           <div className="h-4 w-px bg-white/5 hidden md:block"></div>
           <p className="text-slate-500">
             Powered By: <span className="text-cyan-400">OpenCurrent</span>

@@ -141,7 +141,7 @@ const RegulatoryPage: React.FC = () => {
               {[
                 { title: "AES-256 Cloud Encryption", content: "All patient data in transit uses TLS 1.3, while data at rest is encrypted using AES-256 standard on Tier-4 data centers with 99.99% durability." },
                 { q: "PHI De-identification", content: "Our edge gateway automatically strips DICOM tags containing PHI (Name, DOB, ID) before the pixels leave the hospital firewall." },
-                { q: "SOC2 Type II / GDPR", content: "SavannaMind undergoes annual independent SOC2 Type II audits and is fully compliant with EU GDPR and US HIPAA mandates." }
+                { q: "SOC2 Type II / GDPR", content: "QuantusRad undergoes annual independent SOC2 Type II audits and is fully compliant with EU GDPR and US HIPAA mandates." }
               ].map((item, i) => (
                 <details key={i} className="group bg-white/5 rounded-[2.5rem] border border-white/5 overflow-hidden transition-all hover:bg-white/[0.08] backdrop-blur-md">
                   <summary className="flex items-center justify-between p-10 cursor-pointer list-none">

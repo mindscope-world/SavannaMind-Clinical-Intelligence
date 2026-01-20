@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SavannaMind | Healthcare AI Diagnostics</title>
+    <title>QuantusRad | Healthcare AI Diagnostics</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script>
@@ -37,13 +38,12 @@
         background-color: var(--medical-dark);
         color: #f8fafc;
         margin: 0;
-        cursor: none; /* Custom magnetic cursor will be used */
+        cursor: none;
       }
       .gradient-hero {
         background: radial-gradient(circle at 50% 50%, #0a2540 0%, #011627 100%);
       }
       
-      /* High-End Grainy Glassmorphism */
       .grainy-glass {
         position: relative;
         overflow: hidden;
@@ -63,7 +63,6 @@
         pointer-events: none;
       }
 
-      /* Tactile Bento Card Transitions */
       .bento-card {
         transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
       }
@@ -71,28 +70,31 @@
         transform: scale(1.02);
       }
 
-      /* Hide scrollbar */
       ::-webkit-scrollbar { width: 8px; }
       ::-webkit-scrollbar-track { background: #011627; }
       ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
       ::-webkit-scrollbar-thumb:hover { background: #334155; }
     </style>
-<script type="importmap">
+    <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "react": "https://esm.sh/react@18.3.1",
+    "react/": "https://esm.sh/react@18.3.1/",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "react-dom/": "https://esm.sh/react-dom@18.3.1/",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.462.0?deps=react@18.3.1",
+    "framer-motion": "https://esm.sh/framer-motion@11.11.17?deps=react@18.3.1",
+    "three": "https://esm.sh/three@0.170.0",
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@8.17.10?deps=react@18.3.1,three@0.170.0",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@9.117.3?deps=react@18.3.1,react-dom@18.3.1,three@0.170.0,@react-three/fiber@8.17.10",
     "vite": "https://esm.sh/vite@^7.3.0",
     "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
   }
 }
 </script>
-</head>
+  </head>
   <body>
-    <!-- SVG Noise Filter for Tactile Grainy Texture -->
     <svg style="position: absolute; width: 0; height: 0; pointer-events: none;">
       <filter id="grainy-noise">
         <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />

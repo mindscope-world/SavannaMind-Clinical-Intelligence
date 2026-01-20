@@ -47,13 +47,13 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
           <div className="relative w-12 h-12 flex items-center justify-center">
              <div className="absolute inset-0 bg-white/10 rounded-full scale-110 group-hover:scale-125 transition-transform duration-500"></div>
              <img 
-               src="https://api.dicebear.com/7.x/initials/svg?seed=SM&backgroundColor=d4af37,22d3ee&fontFamily=Inter&fontWeight=800" 
+               src="https://api.dicebear.com/7.x/initials/svg?seed=QR&backgroundColor=d4af37,22d3ee&fontFamily=Inter&fontWeight=800" 
                className="w-10 h-10 rounded-full border border-medical-gold/30 shadow-lg relative z-10" 
-               alt="SavannaMind Logo"
+               alt="QuantusRad Logo"
              />
           </div>
           <span className="text-2xl font-extrabold tracking-tight text-white group-hover:text-cyan-400 transition-colors">
-            Savanna<span className="text-cyan-400">Mind</span>
+            Quantus<span className="text-cyan-400">Rad</span>
           </span>
         </div>
 

@@ -45,16 +45,16 @@ export const STATS: StatItem[] = [
 
 export const PRODUCTS: ProductHighlight[] = [
   {
-    id: "sXR",
-    title: "Chest X-Ray (sXR)",
+    id: "qXR",
+    title: "Chest X-Ray (qXR)",
     subtitle: "Automated Chest Screening",
     description: "Our flagship AI solution detects 30+ abnormalities in chest X-rays, including TB, nodules, and pneumonia, with clinical-grade accuracy.",
     imageUrl: "https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?auto=format&fit=crop&q=80&w=2000",
     features: ["Instant Triage", "TB Screening", "Longitudinal Tracking"]
   },
   {
-    id: "sER",
-    title: "Neuro Triage (sER)",
+    id: "qER",
+    title: "Neuro Triage (qER)",
     subtitle: "Emergency Room Triage",
     description: "Identifies life-threatening anomalies like intracranial hemorrhages, infarcts, and fractures in non-contrast head CT scans within seconds.",
     imageUrl: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&q=80&w=2000",
@@ -64,7 +64,7 @@ export const PRODUCTS: ProductHighlight[] = [
 
 export const CLINICAL_STUDIES = [
   {
-    id: "sm-pub-001",
+    id: "qr-pub-001",
     title: "Deep Learning for Automated Detection of Cystic Fibrosis on Chest Radiographs",
     authors: "Chilamkurthy S., et al.",
     journal: {
@@ -81,11 +81,11 @@ export const CLINICAL_STUDIES = [
       { label: "Sensitivity", value: "94%" },
       { label: "Specificity", value: "91%" }
     ],
-    abstract_preview: "This multi-center study evaluates the performance of the SavannaMind deep learning algorithm in detecting early structural changes in pediatric cystic fibrosis patients compared to expert radiologist consensus.",
+    abstract_preview: "This multi-center study evaluates the performance of the QuantusRad deep learning algorithm in detecting early structural changes in pediatric cystic fibrosis patients compared to expert radiologist consensus.",
     is_featured: true
   },
   {
-    id: "sm-pub-002",
+    id: "qr-pub-002",
     title: "Validation of AI Triage for Intracranial Hemorrhage in Acute Stroke Pathways",
     authors: "Miller J., et al.",
     journal: {
@@ -102,11 +102,11 @@ export const CLINICAL_STUDIES = [
       { label: "Sensitivity", value: "97%" },
       { label: "AUC", value: "0.98" }
     ],
-    abstract_preview: "Evaluating the efficacy of sER in detecting acute intracranial hemorrhage across 12 emergency departments, showing significant reduction in 'scan-to-notification' time.",
+    abstract_preview: "Evaluating the efficacy of qER in detecting acute intracranial hemorrhage across 12 emergency departments, showing significant reduction in 'scan-to-notification' time.",
     is_featured: false
   },
   {
-    id: "sm-pub-003",
+    id: "qr-pub-003",
     title: "AI-Powered Community Screening for Tuberculosis in High-Burden Settings",
     authors: "Rodriguez E., et al.",
     journal: {
@@ -136,9 +136,9 @@ export const REGULATORY_BADGES = [
 ];
 
 export const CLEARANCE_TABLE = [
-  { product: 'sXR', body: 'FDA', cert: 'K183145', region: 'USA' },
-  { product: 'sXR', body: 'EMA', cert: 'CE 716501', region: 'EU' },
-  { product: 'sER', body: 'FDA', cert: 'K201442', region: 'USA' },
-  { product: 'sER', body: 'Health Canada', cert: '105231', region: 'Canada' },
-  { product: 'sVascular', body: 'FDA', cert: 'Pending', region: 'USA' }
+  { product: 'qXR', body: 'FDA', cert: 'K183145', region: 'USA' },
+  { product: 'qXR', body: 'EMA', cert: 'CE 716501', region: 'EU' },
+  { product: 'qER', body: 'FDA', cert: 'K201442', region: 'USA' },
+  { product: 'qER', body: 'Health Canada', cert: '105231', region: 'Canada' },
+  { product: 'qVascular', body: 'FDA', cert: 'Pending', region: 'USA' }
 ];

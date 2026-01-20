@@ -38,7 +38,7 @@ const SolutionsPage: React.FC = () => {
               {/* Cloud Center */}
               <circle cx="250" cy="250" r="80" fill="none" stroke="#22d3ee" strokeWidth="2" strokeDasharray="10 5" className="animate-[spin_20s_linear_infinite]" />
               <circle cx="250" cy="250" r="60" fill="#22d3ee" fillOpacity="0.1" />
-              <text x="250" y="255" textAnchor="middle" fill="#22d3ee" className="text-xs font-black uppercase tracking-widest font-mono">Qure_Cloud</text>
+              <text x="250" y="255" textAnchor="middle" fill="#22d3ee" className="text-xs font-black uppercase tracking-widest font-mono">Quantus_Cloud</text>
               
               {/* Satellites */}
               {[
@@ -62,7 +62,7 @@ const SolutionsPage: React.FC = () => {
 
         {/* Problem-Solution Accordions */}
         <div className="space-y-6">
-          <h2 className="text-3xl font-black uppercase tracking-widest mb-12">The Qure Impact</h2>
+          <h2 className="text-3xl font-black uppercase tracking-widest mb-12">The Quantus Impact</h2>
           {[
             { q: "Clinician Burnout & Workload", a: "By triaging normal scans instantly, we allow radiologists to focus on complex cases, reducing diagnostic fatigue by up to 35%." },
             { q: "Detection of Subtle Anomalies", a: "Our AI highlights findings that can be easily missed in high-volume settings, such as tiny nodules or early-stage infarcts." },

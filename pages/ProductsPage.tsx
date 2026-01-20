@@ -23,11 +23,11 @@ const FeaturesContent: React.FC<{ sliderPos: number; handleSliderChange: (e: any
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
         <div className="space-y-10">
           <h1 className="text-6xl lg:text-[100px] font-black tracking-tighter leading-[0.9] text-white">
-            sXR: The Future <br/>
+            qXR: The Future <br/>
             of <span className="text-cyan-400">Chest Triage.</span>
           </h1>
           <p className="text-xl text-slate-400 leading-relaxed max-w-xl">
-            SavannaMind's clinical-grade AI detects 30+ chest abnormalities with sub-millimeter precision, triaging patients instantly.
+            QuantusRad's clinical-grade AI detects 30+ chest abnormalities with sub-millimeter precision, triaging patients instantly.
           </p>
           
           <div className="grid grid-cols-3 gap-6">
@@ -71,7 +71,7 @@ const FeaturesContent: React.FC<{ sliderPos: number; handleSliderChange: (e: any
                 <item.icon className="text-cyan-400 group-hover:text-black" size={28} />
               </div>
               <h3 className="text-2xl font-black mb-4 group-hover:text-cyan-400 transition-colors">{item.title}</h3>
-              <p className="text-slate-400 text-base leading-relaxed">{item.desc}</p>
+              <div className="text-slate-400 text-base leading-relaxed">{item.desc}</div>
             </div>
           ))}
         </div>
@@ -126,8 +126,8 @@ const ProductsPage: React.FC = () => {
           {activeTab === 'CLINICAL EVIDENCE' && (
             <motion.div key="evidence" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
               <div className="mb-12">
-                 <h2 className="text-3xl font-black uppercase tracking-widest mb-4">sXR Evidence</h2>
-                 <p className="text-slate-500">Filtered clinical studies specifically for SavannaMind Chest X-ray solutions.</p>
+                 <h2 className="text-3xl font-black uppercase tracking-widest mb-4">qXR Evidence</h2>
+                 <p className="text-slate-500">Filtered clinical studies specifically for QuantusRad Chest X-ray solutions.</p>
               </div>
               <ClinicalEvidencePage />
             </motion.div>
@@ -135,8 +135,8 @@ const ProductsPage: React.FC = () => {
           {activeTab === 'REGULATORY' && (
             <motion.div key="regulatory" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
               <div className="mb-12">
-                 <h2 className="text-3xl font-black uppercase tracking-widest mb-4">sXR Regulatory</h2>
-                 <p className="text-slate-500">Global clearance status and security whitepapers for sXR deployment.</p>
+                 <h2 className="text-3xl font-black uppercase tracking-widest mb-4">qXR Regulatory</h2>
+                 <p className="text-slate-500">Global clearance status and security whitepapers for qXR deployment.</p>
               </div>
               <RegulatoryPage />
             </motion.div>

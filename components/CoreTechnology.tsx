@@ -36,7 +36,7 @@ const CoreTechnology: React.FC = () => {
           >
             <div className="flex items-center gap-3">
               <span className="w-8 h-[1px] bg-medical-gold"></span>
-              <span className="text-medical-gold font-mono text-[10px] font-bold tracking-[0.3em] uppercase">SavannaMind Intelligence V.001</span>
+              <span className="text-medical-gold font-mono text-[10px] font-bold tracking-[0.3em] uppercase">QuantusRad Intelligence V.001</span>
             </div>
             <h2 className="text-5xl lg:text-7xl font-black text-white leading-tight">
               Clinical <br/>
@@ -65,7 +65,7 @@ const CoreTechnology: React.FC = () => {
               className="absolute top-0 right-0 p-6 border border-cyan-400/20 rounded-3xl bg-cyan-500/5 backdrop-blur-xl"
             >
               <div className="flex items-center justify-between mb-4">
-                <span className="text-[10px] font-mono text-cyan-400 font-bold tracking-widest">SAVANNAMIND_SCAN_001</span>
+                <span className="text-[10px] font-mono text-cyan-400 font-bold tracking-widest">QUANTUSRAD_SCAN_001</span>
                 <div className="w-2 h-2 rounded-full bg-medical-gold animate-pulse"></div>
               </div>
               <div className="space-y-2">
@@ -85,7 +85,7 @@ const CoreTechnology: React.FC = () => {
                 </div>
               </div>
               <div className="mt-6 font-mono text-[8px] text-slate-500">
-                CORE_ID: SM_X_4492<br/>
+                CORE_ID: QR_X_4492<br/>
                 LOCATION: CLOUD_NODE_09<br/>
                 STATUS: ANALYZING_VOLUMETRIC_DATA
               </div>

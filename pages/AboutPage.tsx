@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Globe, Users, Trophy, MapPin } from 'lucide-react';
+import VisualGlobe from '../components/VisualGlobe.tsx';
 
 const AboutPage: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const AboutPage: React.FC = () => {
           <div className="space-y-8">
             <h1 className="text-6xl font-black tracking-tighter">Decade of <span className="text-cyan-400">Scale.</span></h1>
             <p className="text-xl text-slate-400 leading-relaxed">
-              Founded in 2016, Qure.ai has grown from a specialized research lab to the world's most adopted AI platform, serving over 30 million patients across 90 countries.
+              Founded in 2016, QuantusRad has grown from a specialized research lab to the world's most adopted AI platform, serving over 30 million patients across 90 countries.
             </p>
             <div className="flex gap-12 pt-4">
               <div>
@@ -30,22 +31,14 @@ const AboutPage: React.FC = () => {
           </div>
           
           <div className="relative aspect-square">
-            <div className="absolute inset-0 bg-cyan-500/10 rounded-full blur-3xl"></div>
-            <svg viewBox="0 0 500 500" className="w-full h-full grayscale opacity-40">
-              {/* Minimal SVG Map Placeholder */}
-              <path d="M100 150 Q 150 100 200 150 T 300 150 T 400 150" fill="none" stroke="#fff" strokeOpacity="0.2" />
-              <path d="M50 250 Q 150 300 250 250 T 450 250" fill="none" stroke="#fff" strokeOpacity="0.2" />
-              {/* Pulsing Dots */}
-              {[
-                { x: 120, y: 140 }, { x: 380, y: 160 }, { x: 250, y: 320 }, { x: 420, y: 380 }, { x: 180, y: 410 }
-              ].map((dot, i) => (
-                <g key={i}>
-                  <circle cx={dot.x} cy={dot.y} r="4" fill="#22d3ee" />
-                  <circle cx={dot.x} cy={dot.y} r="15" fill="#22d3ee" fillOpacity="0.2" className="animate-ping" />
-                </g>
-              ))}
-            </svg>
-            <div className="absolute bottom-10 right-10 bg-black/50 backdrop-blur-md p-6 rounded-3xl border border-white/10 flex items-center gap-4">
+            <div className="absolute inset-0 bg-cyan-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+            
+            {/* High-Quality 3D Rotating Globe Replacement */}
+            <div className="w-full h-full">
+              <VisualGlobe />
+            </div>
+
+            <div className="absolute bottom-10 right-10 bg-black/50 backdrop-blur-md p-6 rounded-3xl border border-white/10 flex items-center gap-4 z-20">
                <div className="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center text-black font-black">90+</div>
                <div className="text-xs font-bold uppercase tracking-widest">Countries Reached</div>
             </div>

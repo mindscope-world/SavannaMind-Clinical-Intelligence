@@ -135,7 +135,7 @@ const MedicalScanner: React.FC<MedicalScannerProps> = ({ src, alt }) => {
            </div>
            
            <div className="text-[10px] font-mono text-cyan-400/40 group-hover:text-cyan-400/80 transition-colors uppercase tracking-widest">
-              Scan_ID: SM_X8829
+              Scan_ID: QR_X8829
            </div>
         </div>
       </div>

@@ -13,8 +13,11 @@ const Hero: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const headline = "SavannaMind: Clinical Intelligence Redefined";
+  const headline = "QuantusRad: Clinical Intelligence Redefined";
   const words = headline.split(" ");
+  
+  const subtitleText = "Empowering doctors with high-fidelity deep learning diagnostics. QuantusRad is currently active at";
+  const subtitleWords = subtitleText.split(" ");
 
   const container = {
     hidden: { opacity: 0 },
@@ -28,8 +31,24 @@ const Hero: React.FC = () => {
   };
 
   const item = {
-    hidden: { y: 100, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     show: { y: 0, opacity: 1, transition: { duration: 0.8, ease: [0.33, 1, 0.68, 1] } }
+  };
+
+  const subtitleContainer = {
+    hidden: { opacity: 1 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.03,
+        delayChildren: 1.0, // Delay to start after headline words are mostly visible
+      }
+    }
+  };
+
+  const subtitleItem = {
+    hidden: { opacity: 0, y: 10 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.4 } }
   };
 
   return (
@@ -47,34 +66,47 @@ const Hero: React.FC = () => {
       />
       
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10 py-32">
-        <motion.div 
-          variants={container}
-          initial="hidden"
-          animate="show"
-          className="flex flex-col space-y-10"
-        >
-          <div className="flex flex-wrap gap-x-5">
+        <div className="flex flex-col space-y-10">
+          <motion.div 
+            variants={container}
+            initial="hidden"
+            animate="show"
+            className="flex flex-wrap gap-x-5"
+          >
             {words.map((word, i) => (
               <motion.span 
                 key={i}
                 variants={item}
-                className={`text-5xl md:text-7xl lg:text-8xl font-black leading-[1.1] tracking-tighter ${word.includes('SavannaMind') ? 'text-cyan-400' : 'text-white'}`}
+                className={`text-5xl md:text-7xl lg:text-8xl font-black leading-[1.1] tracking-tighter ${word.includes('QuantusRad') ? 'text-cyan-400' : 'text-white'}`}
               >
                 {word}
               </motion.span>
             ))}
-          </div>
+          </motion.div>
           
           <motion.p 
-            variants={item}
+            variants={subtitleContainer}
+            initial="hidden"
+            animate="show"
             className="text-xl md:text-2xl text-slate-400 max-w-xl leading-relaxed font-medium"
           >
-            Empowering doctors with high-fidelity deep learning diagnostics. 
-            SavannaMind is currently active at <span className="text-white">3,000+ clinical sites</span> worldwide.
+            {subtitleWords.map((word, i) => (
+              <motion.span key={i} variants={subtitleItem} className="inline-block mr-1.5">
+                {word}
+              </motion.span>
+            ))}
+            <motion.span variants={subtitleItem} className="text-white inline-block font-bold">
+              3,000+ clinical sites
+            </motion.span>
+            <motion.span variants={subtitleItem} className="inline-block ml-1">
+              worldwide.
+            </motion.span>
           </motion.p>
 
           <motion.div 
-            variants={item}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.8, duration: 0.8 }}
             className="flex flex-col sm:flex-row items-start gap-6"
           >
             <button data-magnetic className="relative group overflow-hidden bg-cyan-400 text-black px-12 py-5 rounded-2xl font-black text-lg shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-all transform active:scale-95 uppercase tracking-widest">
@@ -86,20 +118,20 @@ const Hero: React.FC = () => {
               <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></div>
             </button>
           </motion.div>
-        </motion.div>
+        </div>
 
         {/* HUD UI Element */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, delay: 0.8 }}
+          transition={{ duration: 1.2, delay: 1.2 }}
           className="hidden lg:flex justify-end relative"
         >
           <div className="relative group">
             <div className="absolute -inset-4 bg-cyan-500/20 rounded-[3rem] blur-2xl animate-pulse"></div>
             <div className="relative bg-[#011627]/80 border border-white/10 rounded-[2.5rem] p-10 backdrop-blur-2xl w-full max-w-md shadow-3xl">
               <div className="flex justify-between items-center mb-8">
-                <h3 className="text-xl font-bold text-white tracking-widest uppercase">SM_V4 Metrics</h3>
+                <h3 className="text-xl font-bold text-white tracking-widest uppercase">QR_V4 Metrics</h3>
                 <span className="text-xs font-mono text-cyan-400">ENCRYPTED_STREAM</span>
               </div>
               
@@ -118,7 +150,7 @@ const Hero: React.FC = () => {
                       <motion.div 
                         initial={{ width: 0 }}
                         animate={{ width: stat.val }}
-                        transition={{ duration: 2, delay: 1.5 + (i * 0.2) }}
+                        transition={{ duration: 2, delay: 2.0 + (i * 0.2) }}
                         className={`h-full ${stat.color}`}
                       />
                     </div>
@@ -128,7 +160,7 @@ const Hero: React.FC = () => {
 
               <div className="mt-10 p-4 border border-cyan-500/20 rounded-xl bg-cyan-500/5">
                 <p className="text-[10px] font-mono text-cyan-400/70 leading-relaxed">
-                  // SAVANNAMIND_SYS_V4.2<br/>
+                  // QUANTUSRAD_SYS_V4.2<br/>
                   // CORE_NEURAL_LINK: ONLINE<br/>
                   // SYNCING_GLOBAL_PATHWAYS...
                 </p>
